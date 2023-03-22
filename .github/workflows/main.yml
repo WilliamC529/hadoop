@@ -15,7 +15,7 @@ jobs:
         run: | 
           cd hadoop-maven-plugins
           mvn install
-          mvn -pl hadoop-common-project/hadoop-common test -Dtest=org.apache.hadoop.mapreduce.v2.app.webapp.TestAMWebServicesJobs.testJobsXML
+          mvn -pl hadoop/hadoop-common-project/hadoop-common test -Dtest=org.apache.hadoop.mapreduce.v2.app.webapp.TestAMWebServicesJobs.testJobsXML
         
   Test_With_Nondex_Shuffling:
     runs-on: ubuntu-latest
@@ -30,4 +30,4 @@ jobs:
         run: | 
           cd hadoop-maven-plugins
           mvn install
-          mvn -pl hadoop-common-project/hadoop-common edu.illinois:nondex-maven-plugin:1.1.2:nondex -Dtest=org.apache.hadoop.mapreduce.v2.app.webapp.TestAMWebServicesJobs.testJobsXML
+          mvn -pl hadoop/hadoop-common-project/hadoop-common edu.illinois:nondex-maven-plugin:1.1.2:nondex -Dtest=org.apache.hadoop.mapreduce.v2.app.webapp.TestAMWebServicesJobs.testJobsXML
