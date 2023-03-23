@@ -12,7 +12,8 @@ jobs:
           java-version: '8'
           distribution: 'temurin'
       - name: Test
-        run: 
+        run: |
+          git checkout cc2babc1f75c93bf89a8f10da525f944c15d02ea
           mvn -pl hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-core test -Dtest=org.apache.hadoop.mapreduce.v2.app.webapp.TestAMWebServicesJobs.testJobsXML
         
   Test_With_Nondex_Shuffling:
@@ -25,5 +26,6 @@ jobs:
           java-version: '8'
           distribution: 'temurin'
       - name: Test
-        run: 
+        run: |
+          git checkout cc2babc1f75c93bf89a8f10da525f944c15d02ea
           mvn -pl hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-core edu.illinois:nondex-maven-plugin:1.1.2:nondex -Dtest=org.apache.hadoop.mapreduce.v2.app.webapp.TestAMWebServicesJobs.testJobsXML
