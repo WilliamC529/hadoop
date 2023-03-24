@@ -13,7 +13,7 @@ jobs:
           distribution: 'temurin'
       - name: Switch to commit
         run:
-          git checkout 396ce0d9f470a5e8af03987ad6396d0f08b3d225
+          git checkout ceab72d9b4ede31c1363b773cd349625b6393b41
       - name: Test
         run: 
           mvn -pl hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-core test -Dtest=org.apache.hadoop.mapreduce.v2.app.webapp.TestAMWebServicesJobs.testJobsXML
@@ -29,7 +29,7 @@ jobs:
           distribution: 'temurin'
       - name: Switch to commit
         run:
-          git checkout 396ce0d9f470a5e8af03987ad6396d0f08b3d225
+          git checkout ceab72d9b4ede31c1363b773cd349625b6393b41
       - name: Test
         run: 
           mvn -pl hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-core edu.illinois:nondex-maven-plugin:1.1.2:nondex -Dtest=org.apache.hadoop.mapreduce.v2.app.webapp.TestAMWebServicesJobs.testJobsXML
