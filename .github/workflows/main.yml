@@ -13,7 +13,7 @@ jobs:
           distribution: 'temurin'
       - name: version
         run: 
-          git switch test
+          ls
       - name: Test
         run: 
           mvn -pl hadoop-hdfs-project/hadoop-hdfs-httpfs test -Dtest=org.apache.hadoop.test.TestHFSTestCase.waitForTimeOutRatio1
@@ -29,7 +29,7 @@ jobs:
           distribution: 'temurin'
       - name: version
         run: 
-          git switch test
+          ls
       - name: Test
         run: 
           mvn -pl hadoop-hdfs-project/hadoop-hdfs-httpfs edu.illinois:nondex-maven-plugin:1.1.2:nondex -Dtest=org.apache.hadoop.test.TestHFSTestCase.waitForTimeOutRatio1
