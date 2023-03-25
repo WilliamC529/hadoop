@@ -11,9 +11,9 @@ jobs:
         with:
           java-version: '8'
           distribution: 'temurin'
-      - name: Test
+      - name: version
         run: 
-          git revert cc2babc1f75c93bf89a8f10da525f944c15d02ea
+          git revert 90f6cedbc7e2b0b464822f95f832adc9214ff852
       - name: Test
         run: 
           mvn -pl hadoop-hdfs-project/hadoop-hdfs-httpfs test -Dtest=org.apache.hadoop.test.TestHFSTestCase.waitForTimeOutRatio1
@@ -27,9 +27,9 @@ jobs:
         with:
           java-version: '8'
           distribution: 'temurin'
-      - name: Test
+      - name: version
         run: 
-          git revert cc2babc1f75c93bf89a8f10da525f944c15d02ea
+          git revert 90f6cedbc7e2b0b464822f95f832adc9214ff852
       - name: Test
         run: 
           mvn -pl hadoop-hdfs-project/hadoop-hdfs-httpfs edu.illinois:nondex-maven-plugin:1.1.2:nondex -Dtest=org.apache.hadoop.test.TestHFSTestCase.waitForTimeOutRatio1
